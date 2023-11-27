@@ -1,0 +1,58 @@
+<!DOCTYPE html> <html> 
+<head>
+<title>Beach Items Purchased</title>
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script>
+
+	var itemsPurchased = [
+		{item: 'boogie board', cost: 15.99, quantity: 3},
+		{item: 'shark-tooth necklace', cost: 10.99, quantity: 1},
+		{item: 'inflatable alligator', cost: 12.99, quantity: 2},
+		{item: 'flip flops', cost: 16.99, quantity: 1},
+		{item: 'beach towel', cost: 10.99, quantity: 2},
+		{item: 'goggles', cost: 8.99, quantity: 2},
+	];
+	
+	window.onload = function() {
+		document.getElementById('showData').onclick = function() {
+			var tbl = document.createElement('table')
+			tbl.setAttribute('class', 'table');
+			var row = tbl.insertRow(-1)
+			row.insertCell().innerHTML = "Item"
+			row.insertCell().innerHTML = "Cost"
+			row.insertCell().innerHTML = "Quantity"
+			row.insertCell().innerHTML = "Subtotal"
+			
+			for (i = 0; i < itemsPurchased.length; i++) {
+				subtotal = ((itemsPurchased[i].quantity) * (itemsPurchased[i].cost)).toFixed(2);
+				row = tbl.insertRow(-1)
+				row.insertCell().innerHTML = itemsPurchased[i].item;
+				row.insertCell().innerHTML = itemsPurchased[i].cost;
+				row.insertCell().innerHTML = itemsPurchased[i].quantity;
+				row.insertCell().innerHTML = subtotal;
+			}
+			
+			var display = document.getElementById("tableData");
+			display.appendChild(tbl)
+		}
+	}
+</script>
+</head>
+<body>
+
+<div class = 'container'>
+	<h3>Beach Items Purchased</h3>
+	
+	<form>
+		<button type="button" id="showData">Click for table</button>
+	</form><br>
+	
+	<div id='tableData'></div>
+</div>
+</body>
+</html>
