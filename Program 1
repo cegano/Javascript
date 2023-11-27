@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head><title>Total Cost of Items with Tax</title>
+
+<script type="text/javascript">
+
+	function getCost() {
+		
+		var itemCost;
+		var quantityPurchased;
+		var totalWithTax;
+		
+		itemCost=parseFloat(document.itemForm.txtItemCost.value);
+		quantityPurchased=parseFloat(document.itemForm.txtPurchased.value);
+		
+		totalWithTax= itemCost * quantityPurchased * 1.06;
+		document.itemForm.txtAnswer.value= totalWithTax;
+		
+	}
+	
+</script></head>
+
+<body>
+
+	<p>Type the cost of the item in the first box. Type the quantity purchased in the second box.  Click the total button to calculate the total cost of the items with tax.</p>
+	
+<form name="itemForm">
+	
+	<p><input size=10 name="txtItemCost"> Enter item cost</p>
+	<p><input size=10 name="txtPurchased"> Enter quantity purchased</p>
+	
+	
+	<p><input onClick="getCost()" type="button" value="Click for Total"></p>
+	
+	<p><input size="10" name="txtAnswer"> Total cost with 6% tax</p>
+	
+
+</form></body></html>
