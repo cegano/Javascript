@@ -1,6 +1,6 @@
 # Javascript
 
-<a href=><h3>Program 1</h3></a>
+<a href=https://github.com/cegano/Javascript/blob/main/Program%201><h3>Program 1</h3></a>
 <p>Javascript and HTML work together in this program to allow the user to enter an item cost in one textbox and a quantity purchased in a second textbox. When a generic button is clicked the total cost + 6% tax is displayed in a third text box.</p>
 
 <a href=><h3>Program 2</h3></a>
