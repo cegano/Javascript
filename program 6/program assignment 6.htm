@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+
+	<title>program assignment 6</title>
+	
+<style>
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1,h2,h3,h4,h5,h6,.w3-slim,.w3-wide{font-family:"Segoe UI",Arial,sans-serif}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+.w3-serif{font-family:"Times New Roman",Times,serif}
+h1,h2,h3,h4,h5,h6{font-weight:400;margin:10px 0}.w3-wide{letter-spacing:4px}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
+hr{height:0;border:0;border-top:1px solid #eee;margin:20px 0}
+img{margin-bottom:-5px}a{color:inherit}
+table{border-collapse:collapse;border-spacing:0;width:100%;display:table}
+table,th,td{border:none}.w3-table-all{border:1px solid #ccc}
+.w3-bordered tr,.w3-table-all tr{border-bottom:1px solid #ddd}
+.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-table-all tr:nth-child(odd){background-color:#fff}
+.w3-table-all tr:nth-child(even){background-color:#f1f1f1}
+.w3-hoverable tbody tr:hover,.w3-ul.w3-hoverable li:hover{background-color:#ccc}
+.w3-centered tr th,.w3-centered tr td{text-align:center}
+.w3-table td,.w3-table th,.w3-table-all td,.w3-table-all th{padding:6px 8px;display:table-cell;text-align:left;vertical-align:top}
+.w3-table th:first-child,.w3-table td:first-child,.w3-table-all th:first-child,.w3-table-all td:first-child{padding-left:16px}
+
+.w3-badge{border-radius:50%}
+ul.w3-ul{list-style-type:none;padding:0;margin:0}
+ul.w3-ul li{padding:6px 2px 6px 16px;border-bottom:1px solid #ddd}
+ul.w3-ul li:last-child{border-bottom:none}
+.w3-tooltip,.w3-display-container{position:relative}
+.w3-fluid{max-width:100%;height:auto}
+.w3-tooltip .w3-text{display:none}
+.w3-tooltip:hover .w3-text{display:inline-block}
+
+
+
+/* .w3-code{font-family:Consolas,"courier new";font-size:16px;line-height:1.4;width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #009688;word-wrap:break-word} */
+
+.w3-code{font-family:Consolas,"courier new";font-size:16px;line-height:1.4;width:auto;background-color:#fff;padding:10px 12px;border-left:4px solid silver; word-wrap:break-word}
+
+.w3-example,.w3-code,.w3-reference{margin:20px 0}
+.w3-card{border:1px solid #ccc}
+.w3-card-2,.w3-example{box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important}
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important}
+.w3-card-8{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)!important}
+.w3-card-12{box-shadow:0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19)!important}
+.w3-card-16{box-shadow:0 16px 24px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21)!important}
+.w3-card-24{box-shadow:0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22)!important}
+
+
+iframe {margin-left: 25px;}
+.acode { margin-left: 30px; font-size:medium; font-family: Courier New, Courier, monospace; font-weight:500 }
+img {margin-left: 40px;}
+.codeLeft {font-size:medium; font-family: Courier New, Courier, monospace; font-weight:500}
+
+.aaStrings {color: maroon;}
+.aaComments {color: green;}
+.aaKeywords {color: blue;}
+pre {font-family: Consolas, "Lucida Console", Monaco, monospace; background-color:#EEE; padding-left: 20px;} 
+
+@media (min-width: 1200px) {
+  .w3-container {
+    width: 970px;
+  }
+}
+
+/* Base styles (regardless of theme) */
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+}
+.bs-callout h4 {
+  margin-top: 0;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code,
+.bs-callout .highlight {
+  background-color: #fff;
+}
+
+/* Themes for different contexts */
+.bs-callout-danger {
+  background-color: #fcf2f2;
+  border-color: #dFb5b4;
+}
+.bs-callout-warning {
+  background-color: #fefbed;
+  border-color: #f1e7bc;
+}
+.bs-callout-info {
+  background-color: #f0f7fd;
+  border-color: #d0e3f0;
+}
+
+.bs-callout-danger h4 {
+color: #B94A48;
+}
+
+.bs-callout-warning h4 {
+color: #C09853;
+}
+
+.bs-callout-info h4 {
+color: #3A87AD;
+}
+
+</style>
+
+
+
+</head><body style="width: 80%; margin: 0 auto;">
+<div class="w3-container">
+        
+ <h2>Programming Project 6 (last one)</h2>
+
+<p>The end is near.</p>
+<h3>Program 6, Vue.js</h3>
+<p>You need to take a JSON data file (linked below), and using a Github 
+website you create, your user should be able to read traffic ticket data
+ and display it on 2 different pages. Both pages will contain the links 
+and script tags necessary for Bootstrap and Vue.js, as well as a 
+Bootstrap NAV bar that allows navigating between the pages. The first 
+page displays all of the data, the second page displays some of the data
+ that has been filtered. </p>
+<p><em>There is an example or two similar to this in the second week of lecture notes on Vue (Vue2.html)</em></p>
+<p>Please watch this video which gives an overview of the assignment.</p>
+<p><a href="https://youtu.be/oeuMD_rLul4" title="program 6"><img src="program%20assignment%206_files/youtube-1.png"> program 6 overview</a></p>
+<p>If you have not done so, study the material and code form Vue2 before starting this project.</p>
+<p>Your index.html page should display like this, more or less, but it 
+should display a nav bar and all the 50 rows of data from the data file 
+(linked to below). This page should be titled <em><strong>index.htm</strong></em>l. </p>
+<p><img src="program%20assignment%206_files/p6index.PNG.jpg" alt="index page" width="781" height="655"></p>
+<p>Clicking the<em> 25mph or more over </em>link in the nav bar above should request the second page, which should be titled<em><strong> 25over.htm</strong></em>l. </p>
+<p class="center"><img src="program%20assignment%206_files/p6-25over.jpg" alt="25over.html page" width="851" height="461"></p>
+<p>The data file needed, <em>tickets1.json</em>, has the data already 
+set in JSON format. Vue will destringifiy it for you. As you know, you 
+will need to upload that JSON data file and your index.html and 
+25over.html pages to your Github web site in order to test your code. I 
+recommend getting this to work a little at a time. Test a little bit, 
+maybe on one page only, then when it works, go on the the next step. </p>
+<p>You need to use Bootstrap's NAV bar on both index and 25over pages, 
+but you do not necessarily have to use the inverted NAV bar as shown 
+above. You must also use Vue.js.</p>
+<p>Both pages need to have the links and script tags necessary to load the required Bootstrap and Vue.js libraries.  </p>
+<p><u><strong>Important</strong></u>: In total, for full credit, this project will require you send me <strong>3 </strong>files in a single zipped folder: 25over.html,  index.html, and the data file, <em>tickets1.json</em>. In the email that you use to submit these files you also must <em> include a working link</em>
+ to your Github index page. I will use this link to grade your program. I
+ will look at the files you send me only if there are issues.</p>
+<p>And, I will give 85% credit if you get only the index page (the page 
+with all the data)  working. To get 100% you need to get both pages 
+working. So, I recommend you get the index page working before starting 
+on the gpa page.</p>
+<p><strong><u>Data File</u></strong> link. You will also need the JSON data file, <em>students.json</em>. Here's the zipped data: &nbsp;&nbsp;<a href="https://alt-5beddfe10b70f.blackboard.com/bbcswebdav/pid-47142076-dt-content-rid-324903314_2/courses/JFC_4224_CIT_140_55Z1_50296/CIT140programs/tickets1.zip">tickets1.zip</a></p>
+<p><strong>index.html page</strong> link. As mentined, I will give you 
+the index.html page, and if you get this one page working it will be 
+worth 85%. For 100% both pages need to work.&nbsp;<a href="https://alt-5beddfe10b70f.blackboard.com/bbcswebdav/pid-47142076-dt-content-rid-324903314_2/courses/JFC_4224_CIT_140_55Z1_50296/CIT140programs/index.zip" title="index.html page">index.zip</a></p>
+<p>You'll need to unzip the data file before use. Once decompressed, it will have this name: <em>tickets1.json</em>. Do not alter the data itself. The data file itself is an array that contains 50 or so JSON-ized objects. Here's an example. </p>
+<p class="codeLeft">{<br>
+ &nbsp;"actual_speed": 95,<br>
+&nbsp;"age": 20,<br>
+&nbsp;"posted_speed": 70,<br>
+&nbsp;"stop_date": "7/4/2014",<br>
+&nbsp;"stop_time": "0:11:00",<br>
+&nbsp;"tid": 20124,<br>
+&nbsp;"violator_sex": "Female"<br>
+}</p>
+<p>As we said, the second page, 25over.html, will use <em>v-for</em> to display only those records that have were more than 25 mph over the limit. </p>
+<p><strong>Reminder:</strong> <em>you must</em> zip the folder with your
+ solution files  before attaching it to an email and sending it to me. 
+Also, you must have your Github website functioning when you submit the 
+project. I will use your URL to grade the program. </p>
+<p><strong>Also Important</strong>: Obviously, you will need  a Github 
+account to be able to make use of their web hosting service. How to do 
+this is explained in videos in the lecture notes for week 14, entitled "<em>Your Web Site</em>". </p>
+<h3>How To Submit Your Program</h3>
+<p>To be clear: since you are submitting several files, you cannot just 
+attach them to the email. You'll need to compress the folder containing 
+them and attach the compressed folder to an email in order to properly 
+submit it. Name the folder containing your files using  your name and 
+project number. For example the folder might be named <span class="codeLeft">AJSmith-prog6</span>.<strong> <em>Please put your name on the folder.</em></strong>
+ I get lots of programs; putting your name on the folder help keep 
+things organized and shortens the amount of time it takes to get things 
+graded. As mentioned, you need to <em>type your Github URL in the email </em>your compressed folder is attached to.</p>
+<p>After creating the folder, Zip (compress) the folder by right-clicking on it (on Windows), and then choosing <strong>Send to</strong> from the pop-up menu, then select <strong>Compressed folder</strong>. This will crate a new zipped folder identifiable by the little zipper on the folder icon with a .zip extension.</p>
+<p class="center"><img src="program%20assignment%206_files/compress.gif" alt="compressing a folder" width="585" height="336"></p>
+<p>Then, attach the zipped folder to an email and send it to me.</p>
+<p>Let me know if you have questions.</p>
+</div> 
+<!-- end content -->
+
+
+
+
+</body></html>
