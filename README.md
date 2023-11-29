@@ -15,5 +15,5 @@
 <h2><a href=https://github.com/cegano/Javascript/blob/main/Program%205>Program 5</a></h2>
 <p>The user has an option of two buttons to choose from, one for CIT majors and the other for Business majors.  Once one or both of the buttons are clicked the user will receive a list of students information based by major. The index.html page makes an Ajax request that requests the JSON data and then converts the JSON data to a regular JavaScript array of objects. This array of objects then populates the Handlebars template and displays that data for the user on click.</p>
 
-<h2><a href=https://github.com/cegano/Javascript/blob/main/Program%201>Program 6</a></h2>
+<h2><a href=https://github.com/cegano/Javascript/tree/main/program%206>Program 6</a></h2>
 <p>In this program, the user is able to read traffic ticket data from a JSON file. Both HTML pages contain the links and script tags necessary for Bootstrap and Vue.js, as well as a Bootstrap navigation bar that allows navigating between the pages. The first page displays all of the data, the second page displays some of the data that has been filtered using a v-for loop.</p>
